@@ -1,0 +1,102 @@
+name: Bug report
+description: Report a bug or broken behavior in the Bank platform
+title: "[Bug]: "
+labels: ["type:bug", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+
+        Please do not include passwords, tokens, secret keys, personal data, or payment details.
+
+        Platform:
+        https://bank.easyitlab.tech/
+
+  - type: input
+    id: summary
+    attributes:
+      label: Short summary
+      description: Briefly describe the problem
+      placeholder: Login fails after entering valid credentials
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the platform is affected?
+      options:
+        - Authentication
+        - Student cabinet
+        - Admin panel
+        - API
+        - Payments
+        - Provisioning
+        - UI / Frontend
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide clear steps so the problem can be reproduced
+      placeholder: |
+        1. Open https://bank.easyitlab.tech/
+        2. Sign in with a valid account
+        3. Open the student cabinet
+        4. Click "Generate entities"
+        5. Observe the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: The page should load successfully and the action should complete without errors
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: The page shows an error / the action fails / a 500 response is returned
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, device, environment, etc.
+      placeholder: Chrome 135 / macOS / production
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App version or build info
+      description: If known
+      placeholder: v1.2.0
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, logs, links
+      description: Paste only sanitized screenshots or logs
+      placeholder: Add screenshots or safe logs here
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I checked existing issues and discussions before creating this report
+          required: true
+        - label: I did not include passwords, tokens, payment data, or other sensitive information
+          required: true

@@ -1,0 +1,48 @@
+name: Question
+description: Ask a question about the Bank platform
+title: "[Question]: "
+labels: ["type:question", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for platform questions.
+
+        For broad ideas or open-ended topics, Discussions may be a better place:
+        ../../discussions
+
+        Platform:
+        https://bank.easyitlab.tech/
+
+  - type: input
+    id: summary
+    attributes:
+      label: Question summary
+      placeholder: How do I reset my training environment?
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      placeholder: Add context so we can answer faster
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Authentication
+        - Student cabinet
+        - Admin panel
+        - API
+        - Payments
+        - Provisioning
+        - UI / Frontend
+        - Documentation
+        - Other
+    validations:
+      required: true

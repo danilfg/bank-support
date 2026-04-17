@@ -1,0 +1,75 @@
+name: Access problem
+description: Report login, permissions, invitation, or provisioning issues
+title: "[Access]: "
+labels: ["type:access", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for problems related to sign-in, expired access, wrong permissions, invitations, or provisioning.
+
+        Platform:
+        https://bank.easyitlab.tech/
+
+        Do not include passwords, one-time codes, tokens, or other secrets.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Short summary
+      placeholder: I cannot access the student cabinet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Problem type
+      options:
+        - Cannot sign in
+        - Access expired
+        - Wrong role / permissions
+        - Provisioning not completed
+        - Invitation email not received
+        - Account activated but features are missing
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Account email
+      description: Email used for access
+      placeholder: user@example.com
+    validations:
+      required: true
+
+  - type: input
+    id: when_started
+    attributes:
+      label: When did the problem start?
+      placeholder: 2026-04-17 or about 2 hours ago
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe what happened and where
+      placeholder: I signed in successfully, but after login I see an access denied screen
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or error messages
+      placeholder: Add safe screenshots or error text here
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I did not include passwords, one-time codes, or tokens
+          required: true

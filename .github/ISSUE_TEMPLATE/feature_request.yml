@@ -1,0 +1,87 @@
+name: Feature request
+description: Suggest a new feature or improvement for the Bank platform
+title: "[Feature]: "
+labels: ["type:feature", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea.
+
+        Platform:
+        https://bank.easyitlab.tech/
+
+        Please keep requests specific and practical.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      description: Short and clear title for the request
+      placeholder: Add CSV export for employees
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      placeholder: It is hard to review and reuse employee data without export support
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: Add an "Export CSV" button to the employee list page
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      placeholder: Users can export the current employee list to a CSV file
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Describe any alternative solutions or workarounds
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Authentication
+        - Student cabinet
+        - Admin panel
+        - API
+        - Payments
+        - Provisioning
+        - UI / Frontend
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I checked existing issues and discussions before creating this request
+          required: true

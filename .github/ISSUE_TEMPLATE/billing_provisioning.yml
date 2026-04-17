@@ -1,0 +1,76 @@
+name: Billing / provisioning
+description: Report payment, subscription, tariff, trial, or provisioning issues
+title: "[Billing]: "
+labels: ["type:billing", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for billing, subscription, tariff, trial, and provisioning problems.
+
+        Platform:
+        https://bank.easyitlab.tech/
+
+        Do not post full card numbers, payment secrets, bank account details, or other sensitive financial information.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Short summary
+      placeholder: Payment completed but access was not activated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Payment not processed
+        - Access not activated after payment
+        - Wrong tariff / plan
+        - Trial access
+        - Manual access
+        - Recurring payment
+        - Cancellation
+        - Refund question
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Account email
+      placeholder: user@example.com
+    validations:
+      required: true
+
+  - type: input
+    id: payment_date
+    attributes:
+      label: Payment date
+      placeholder: YYYY-MM-DD
+
+  - type: input
+    id: reference
+    attributes:
+      label: Payment reference or order ID
+      description: If available and safe to share
+      placeholder: ORDER-12345
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      placeholder: I completed the payment, but my account still shows no active access
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I did not include full payment details or sensitive financial information
+          required: true
