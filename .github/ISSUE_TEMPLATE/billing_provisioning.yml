@@ -1,6 +1,6 @@
 name: Billing / provisioning
 description: Report payment, subscription, tariff, trial, or provisioning issues
-title: "[Billing]: "
+title: "[💳 Billing]: "
 labels: ["type:billing", "status:needs-triage"]
 body:
   - type: markdown

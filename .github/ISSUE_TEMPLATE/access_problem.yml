@@ -1,6 +1,6 @@
 name: Access problem
 description: Report login, permissions, invitation, or provisioning issues
-title: "[Access]: "
+title: "[🔐 Access]: "
 labels: ["type:access", "status:needs-triage"]
 body:
   - type: markdown
