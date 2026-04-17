@@ -42,6 +42,17 @@
 
 ---
 
+## 🧭 Where to go?
+
+| You want to... | Go here |
+|----------------|--------|
+| Report a bug | Issues |
+| Request a feature | Issues |
+| Ask a question | Discussions |
+| Share an idea | Discussions |
+
+---
+
 ## 💡 What is this repository?
 
 This repository is the **official support and feedback channel** for the Bank platform.
